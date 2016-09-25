@@ -347,7 +347,6 @@ var femaleHero = Seq.of(
 
 // Only performs as much work as necessary to get the result
 // ------------------------------------------------------------------
-
 console.log(femaleHero)  // Nothing will be called
 
 // This will iterate all three items until the 
