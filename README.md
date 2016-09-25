@@ -327,6 +327,49 @@ batwoman.toJSON() // { skill: 'do very bad thing' }
 
 ```
 
+#### Seq ( Lazy Operation )
+Lazy operation means the chain methods ( operations ) are not exeucted until it is requested. And it will stop the execute when the return items fulfill the request.
+
+```
+import { Seq } from 'immutable'
+
+
+// Note: The order of the items are important
+// ------------------------------------------------------------------
+var femaleHero = Seq.of(
+	  {name:'thor', gender: 'male'},
+	  {name:'hulk', gender: 'male'},
+	  {name:'black widow', gender: 'female'}
+	)
+    .filter(hero => hero.gender == 'female')
+    .map(hero => `${hero.name} is a ${hero.gender}`)
+                              
+
+// Only performs as much work as necessary to get the result
+// ------------------------------------------------------------------
+
+console.log(femaleHero)  // Nothing will be called
+
+// This will iterate all three items until the 
+// first "true" return.  All three hero are iterated
+// util we found one "female hero" to return.
+// ------------------------------------------------------------------
+console.log(femaleHero.get(0))  // return 'black widow is a female'
+
+
+// If we change the order of the Seq, the first "true" will
+// return and the rest of the items will not even iterate.
+// Because the request of getting first "female hero" is fulfilled.
+// In other words, it request only the first iterate to get
+// a "female hero" to return.
+// ------------------------------------------------------------------
+
+{name:'black widow', gender: 'female'},
+{name:'thor', gender: 'male'},
+{name:'hulk', gender: 'male'}
+
+```
+
 
 ## Resources
 * [Introduction to Immutablejs](https://auth0.com/blog/intro-to-immutable-js/)
