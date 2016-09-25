@@ -347,13 +347,13 @@ var femaleHero = Seq.of(
 
 // Only performs as much work as necessary to get the result
 // ------------------------------------------------------------------
-console.log(femaleHero)  // Nothing will be called
+femaleHero  // Nothing will be called
 
 // This will iterate all three items until the 
 // first "true" return.  All three hero are iterated
 // util we found one "female hero" to return.
 // ------------------------------------------------------------------
-console.log(femaleHero.get(0))  // return 'black widow is a female'
+femaleHero.get(0)  // return 'black widow is a female'
 
 
 // If we change the order of the Seq, the first "true" will
