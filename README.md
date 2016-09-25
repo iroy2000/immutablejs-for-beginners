@@ -2,7 +2,7 @@
 
 This documentation is trying to help people who starts using [immutable.js](https://facebook.github.io/immutable-js/) but at the same time feeling confused by the original overwhelming documentation.  
 
-**Pull Request are welcomed !!!** This will be a long term maintaining documentation, and hopefully it will be a community driven effort to make other developers' life easier when learning immutable.js.  
+**Pull Request are welcomed !!!** This will be a long term maintaining documentation, and hopefully it will be a **community driven** effort to make other developers' life easier when learning immutable.js.  
 
 **Worth Mentioning:** The documentation syntax of [immutable.js](https://facebook.github.io/immutable-js/) is written with [Typescript](http://www.typescriptlang.org/docs/handbook/basic-types.html), so if you are consfused, it is not your fault :)
 
