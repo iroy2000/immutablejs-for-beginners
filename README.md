@@ -149,7 +149,6 @@ me.getIn(['profile', 'hobby'])  // READING
 // -------------------------------------------
 me.updateIn(['profile'], profile => profile.delete('hobby'))
 
-
 ```
 
 ## List
@@ -173,7 +172,6 @@ items = items.pop() // 1,2,3,4
 items = items.concat(5, 6)  // 1,2,3,4,5,6
 
 items = items.shift() // 2,3,4,5,6
-
 
 ```
 
@@ -209,11 +207,9 @@ let me = fromJS({
   ]
 })
 
-
 ```
 
 ```
-
 me.get('friends').get(0).get('name') // captain america
 me.getIn(['friends', 0, 'name']) // captain america
 
@@ -246,13 +242,11 @@ me = me.setIn(['friends', friendYouWantToKnowTheIndex, 'equipment'], 'shield')
 list = me.update('friends', 
     friends => friends.sortBy(() => Math.random())
 )
-
 ```
 
 The following show case some common use case for a List
 
 ```
-
 let heroSalaryList = Immutable.List([
   {name: 'Thor', salary: 1000},
   {name: 'Iron Man', salary: 500},
@@ -278,7 +272,6 @@ let filteredHeroSalaryList = heroSalaryList.filter(
 filteredHeroSalaryList.count() // only 1 left
 
 filteredHeroSalaryList.get(0).get('name') // Hawkeye
-
 
 ```
 
