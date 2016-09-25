@@ -8,6 +8,12 @@ This documentation is trying to help people who starts using [immutable.js](http
 
 **If you are looking for basic concept**, please look at the last section `Resources`, I put up a few links to hook you up with some important concepts in Immutable / Immutablejs.
 
+## Table of Contents
+* [Map](#map)
+* [List](#list)
+* [Other Data Structure](#other-data-structure) (Set, Record, Seq)
+* [Resources](#resources)
+
 
 ## Map
 
