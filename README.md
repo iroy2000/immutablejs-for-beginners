@@ -2,9 +2,11 @@
 
 This documentation is trying to help people who starts using [immutable.js](https://facebook.github.io/immutable-js/) but at the same time feeling confused by the original overwhelming documentation.  
 
+**Pull Request are welcomed !!!** This will be a long term maintaining documentation, and hopefully it will be a community driven effort to make other developers' life easier when learning immutable.js.  
+
 **Worth Mentioning:** The documentation syntax of [immutable.js](https://facebook.github.io/immutable-js/) is written with [Typescript](http://www.typescriptlang.org/docs/handbook/basic-types.html), so if you are consfused, it is not your fault :)
 
-**Note:** This will be a long term maintaining documentation, and hopefully it will be a community driven effort to make other developers' life easier when learning immutable.js.  **Pull Request are welcomed !!!**
+**If you are looking for basic concept**, please look at the last section `Resources`, I put up a few links to hook you up with some important concepts in Immutable / Immutablejs.
 
 
 ## Map
@@ -327,6 +329,7 @@ batwoman.toJSON() // { skill: 'do very bad thing' }
 
 
 ## Resources
+* [Introduction to Immutablejs](https://auth0.com/blog/intro-to-immutable-js/)
 * [immutable-docs by brentburg](http://brentburg.github.io/immutable-docs/api)
 * [Immutablejs overview](http://www.darul.io/post/2015-07-06_immutablejs-overview)
 * [Immutable live tutorial](http://blog.klipse.tech/javascript/2016/03/30/immutable.html)
