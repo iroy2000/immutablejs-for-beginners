@@ -387,6 +387,6 @@ femaleHero.get(0)  // return 'black widow is a female'
 ## Contributions
 **Pull Request are welcomed !!!** Hopefully it will be a **community driven** effort to make other developers' life easier when learning immutable.js 
 
-PR could be include more examples, better introduction, presentations, resources ... etc.
+PR could include more examples, better introduction, presentations, resources ... etc.
 
 
