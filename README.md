@@ -365,8 +365,8 @@ femaleHero.get(0)  // return 'black widow is a female'
 //
 // For example: 
 // The request of getting first "female hero" is fulfilled,
-// the progrm terminate, which means the next operation of 
-// `filter()` and `map` will not even get called.
+// the progrm terminates, which means the next operation of 
+// `filter()` and `map()` will not even get called.
 // ------------------------------------------------------------------
 
 {name:'black widow', gender: 'female'},
