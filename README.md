@@ -362,8 +362,11 @@ femaleHero.get(0)  // return 'black widow is a female'
 
 // If we change the order of the Seq, the first "true" will
 // return and the rest of the operations will not even get called.
-// For example, the request of getting first "female hero" is fulfilled,
-// and the program just need to iterate the first item and terminate.
+//
+// For example: 
+// The request of getting first "female hero" is fulfilled,
+// the progrm terminate, which means the next operation of 
+// `filter()` and `map` will not even get called.
 // ------------------------------------------------------------------
 
 {name:'black widow', gender: 'female'},
