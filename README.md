@@ -157,6 +157,18 @@ me.updateIn(['profile'], profile => profile.delete('hobby'))
 
 ```
 
+**Note**
+
+ImmutableJS only converts the high level entry into immutable, but not the deep nested ones. Let's use the above data structure as example:
+
+```
+me.get('profile').get('language') // undefined
+
+me.get('profile').language // javascript
+
+```
+
+
 ## List
 
 #### Assume you have the follwing data structure
