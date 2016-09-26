@@ -361,10 +361,9 @@ femaleHero.get(0)  // return 'black widow is a female'
 
 
 // If we change the order of the Seq, the first "true" will
-// return and the rest of the items will not even iterate.
-// Because the request of getting first "female hero" is fulfilled.
-// In other words, it request only the first iterate to get
-// a "female hero" to return.
+// return and the rest of the operations will not even get called.
+// For example, the request of getting first "female hero" is fulfilled,
+// and the program just need to iterate the first item and terminate.
 // ------------------------------------------------------------------
 
 {name:'black widow', gender: 'female'},
