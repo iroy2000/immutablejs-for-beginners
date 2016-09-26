@@ -13,7 +13,7 @@ This documentation is trying to help people who starts using [immutable.js](http
 * [List](#list)
 * [Other Data Structure](#other-data-structure) (Set, Record, Seq)
 * [Resources](#resources)
-
+* [Contributions](#contributions)
 
 ## Map
 
@@ -382,5 +382,9 @@ femaleHero.get(0)  // return 'black widow is a female'
 * [Immutablejs overview](http://www.darul.io/post/2015-07-06_immutablejs-overview)
 * [Immutable live tutorial](http://blog.klipse.tech/javascript/2016/03/30/immutable.html)
 
+## Contributions
+**Pull Request are welcomed !!!** Hopefully it will be a **community driven** effort to make other developers' life easier when learning immutable.js 
+
+PR could be include more examples, better introduction, presentation, resources ... etc.
 
 
