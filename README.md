@@ -157,9 +157,7 @@ me.updateIn(['profile'], profile => profile.delete('hobby'))
 
 ```
 
-**Note**
-
-`fromJS` is an convenience function that covert nested Objects and Arrays into immutable `Map` and `List` automatically. So if you are using `fromJS`, do not apply or mix `Map` or `List` as you could introducde unintentional bugs.
+**Note** `fromJS` is an convenience function that covert nested Objects and Arrays into immutable `Map` and `List` automatically. So if you are using `fromJS`, do not apply or mix `Map` or `List` as you could introducde unintentional bugs.
 
 
 ## List
