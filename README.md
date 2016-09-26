@@ -2,8 +2,6 @@
 
 This documentation is trying to help people who starts using [immutable.js](https://facebook.github.io/immutable-js/) but at the same time feeling confused by the original overwhelming documentation.  
 
-**Pull Request are welcomed !!!** This will be a long term maintaining documentation, and hopefully it will be a **community driven** effort to make other developers' life easier when learning immutable.js.  
-
 **Worth Mentioning:** The documentation syntax of [immutable.js](https://facebook.github.io/immutable-js/) is written with [Typescript](http://www.typescriptlang.org/docs/handbook/basic-types.html), so if you are consfused, it is not your fault :)
 
 **If you are looking for basic concept**, please look at the last section `Resources`, I put up a few links to hook you up with some important concepts in Immutable / Immutablejs.
@@ -377,14 +375,18 @@ femaleHero.get(0)  // return 'black widow is a female'
 
 
 ## Resources
+
+#### Introduction
 * [Introduction to Immutablejs](https://auth0.com/blog/intro-to-immutable-js/)
-* [immutable-docs by brentburg](http://brentburg.github.io/immutable-docs/api)
 * [Immutablejs overview](http://www.darul.io/post/2015-07-06_immutablejs-overview)
+
+#### Toolings
 * [Immutable live tutorial](http://blog.klipse.tech/javascript/2016/03/30/immutable.html)
+* [immutable-docs](http://brentburg.github.io/immutable-docs/api)
 
 ## Contributions
 **Pull Request are welcomed !!!** Hopefully it will be a **community driven** effort to make other developers' life easier when learning immutable.js 
 
-PR could be include more examples, better introduction, presentation, resources ... etc.
+PR could be include more examples, better introduction, presentations, resources ... etc.
 
 
