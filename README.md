@@ -303,7 +303,7 @@ set1.toArray() // 1,2,3
 
 const set2 = Set(['hello', 'world', 'what', 'up]);
 
-set2.subtract['hello']  // it will remove the value from the list
+set2.subtract['hello']  // it will remove the value from the set
 
 // consider the following case, which the set contains objects
 const greet1 = { 'hello': 'world' };
