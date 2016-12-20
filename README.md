@@ -287,7 +287,7 @@ filteredHeroSalaryList.get(0).get('name') // Hawkeye
 ## Other Data Structure
 
 #### Set
-An array of unique elements, and it will remove any duplicates.
+An array ( or iterable type ) of unique elements, and it will remove any duplicates.
 
 ```
 import { Set } from 'immutable'
@@ -296,6 +296,24 @@ let set1 = Set([1,1,2,2,3,3])
 
 set1.count() // 3
 set1.toArray() // 1,2,3
+
+// You can perform subtract, intersect and union on a set.
+// But if your set is objects, in order to do that safely, 
+// you will have to create variables before creating the set.
+
+const set2 = Set(['hello', 'world', 'what', 'up]);
+
+set2.subtract['hello']  // it will remove the value from the list
+
+// consider the following case, which the set contains objects
+const greet1 = { 'hello': 'world' };
+const greet2 = { 'what': 'up' };
+
+const greetSet = Set([greet1, greet2]);
+
+greetSet.subtract([{'hello': 'world'}]);  // !!! It won't work !!!
+
+greetSet.subtract([greet1]);  // It will work
 
 ```
 
