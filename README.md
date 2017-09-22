@@ -20,7 +20,7 @@ Assume:
 * you have imported your immutablejs somewhere  
 * and, you have the following data structure
 
-```
+```javascript
 import { Map } from 'immutable'
 
 let me = Map({
@@ -31,7 +31,7 @@ let me = Map({
 
 The following will show case basic operation for map
 
-```
+```javascript
 me.name // undefined, you can't reference the properties directly
 me.get('name') // roy
 
@@ -51,7 +51,7 @@ me.get('name') // IROY2000
 
 The following to show case you can merge with plain object
 
-```
+```javascript
 let map2 = Map({
   age: '> 20'
 })
@@ -71,7 +71,7 @@ Note that the equality checking is apply to not just Map only but to others as w
 
 Assume the have the following data structure
 
-```
+```javascript
 import { Map } from 'immutable'
 
 let config = {
@@ -99,7 +99,7 @@ map2.keySeq().equals(me.keySeq())
 
 The following show case some common use case for a map
 
-```
+```javascript
 
 map1.has(['name'])  // true
 
@@ -111,7 +111,7 @@ map1.map((value, key) => `$value is cool`)
 
 Assume you have the following structure for your map
 
-```
+```javascript
 // The following show case you can create immutable data struture 
 // directly from plain js object using fromJS helper function
 // Just remember "array" -> "List" while "object" --> "Map"
@@ -130,7 +130,7 @@ let me = fromJS({
 
 The following will explain how to performing deep values getting / setting
 
-```
+```javascript
 me = me.setIn(['profile', 'language'], 'awesome javascript')
 
 // The following two "gets" are the same
@@ -169,7 +169,7 @@ In immutable.js, most of the data structure shares a lot of the same functionali
 
 It supports javascript array like operations, for example, `pop`, `push`, `concat`, `shift` ...
 
-```
+```javascript
 import { List } from 'immutable'
 
 let items = List([1,2,3,4])
@@ -185,7 +185,7 @@ items = items.shift() // 2,3,4,5,6
 ```
 
 
-```
+```javascript
 import { fromJS } from 'immutable'
 
 
@@ -218,7 +218,7 @@ let me = fromJS({
 
 ```
 
-```
+```javascript
 me.get('friends').get(0).get('name') // captain america
 me.getIn(['friends', 0, 'name']) // captain america
 
@@ -255,7 +255,7 @@ list = me.update('friends',
 
 The following show case some common use case for a List
 
-```
+```javascript
 let heroSalaryList = Immutable.List([
   {name: 'Thor', salary: 1000},
   {name: 'Iron Man', salary: 500},
@@ -289,7 +289,7 @@ filteredHeroSalaryList.get(0).get('name') // Hawkeye
 #### Set
 An array ( or iterable type ) of unique elements, and it will remove any duplicates.
 
-```
+```javascript
 import { Set } from 'immutable'
 
 let set1 = Set([1,1,2,2,3,3])
@@ -301,7 +301,7 @@ set1.toArray() // 1,2,3
 // But if your set is objects, in order to do that safely, 
 // you will have to create variables before creating the set.
 
-const set2 = Set(['hello', 'world', 'what', 'up]);
+const set2 = Set(['hello', 'world', 'what', 'up']);
 
 set2.subtract['hello']  // it will remove the value from the set
 
@@ -320,7 +320,7 @@ greetSet.subtract([greet1]);  // It will work
 #### Record
 Record let you create a javascript class that comes with default values.
 
-```
+```javascript
 import { Record } from 'immutable'
 
 let Villian = Record({ 
@@ -355,7 +355,7 @@ batwoman.toJSON() // { skill: 'do very bad thing' }
 #### Seq ( Lazy Operation )
 Lazy operation means the chain methods ( operations ) are not exeucted until it is requested. And it will stop the execute when the return items fulfill the request.
 
-```
+```javascript
 import { Seq } from 'immutable'
 
 
