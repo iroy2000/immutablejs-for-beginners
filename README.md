@@ -1,10 +1,10 @@
 # Immutable.js for beginners
 
-This documentation is trying to help people who starts using [immutable.js](https://facebook.github.io/immutable-js/) but at the same time feeling confused by the original overwhelming documentation.  
+This documentation is trying to help people who start using [immutable.js](https://facebook.github.io/immutable-js/) but at the same time feeling confused by the original overwhelming documentation.  
 
-**Worth Mentioning:** The documentation syntax of [immutable.js](https://facebook.github.io/immutable-js/) is written with [Typescript](http://www.typescriptlang.org/docs/handbook/basic-types.html), so if you are consfused, it is not your fault :)
+**Worth Mentioning:** The documentation syntax of [immutable.js](https://facebook.github.io/immutable-js/) is written with [Typescript](http://www.typescriptlang.org/docs/handbook/basic-types.html), so if you are confused, it is not your fault :)
 
-**If you are looking for basic concept**, please look at the last section `Resources`, I put up a few links to hook you up with some important concepts in Immutable / Immutablejs.
+**If you are looking for basic concepts**, please look at the last section `Resources`, I put up a few links to hook you up with some important concepts in Immutable / Immutablejs.
 
 ## Table of Contents
 * [Map](#map)
@@ -29,7 +29,7 @@ let me = Map({
 })
 ```
 
-The following will show case basic operation for map
+The following will showcase basic operations for map
 
 ```javascript
 me.name // undefined, you can't reference the properties directly
@@ -38,7 +38,7 @@ me.get('name') // roy
 me.set('name', 'iroy2000') // setting values
 me.get('name') // roy ( what ??? )
 
-// !!! Remember in immutable.js when you ""mutate" the data, 
+// !!! Remember in immutable.js when you "mutate" the data, 
 // it does not modify the original value, but it will return a new one
 // -----------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ me = me.update('name', item => item.toUppercase)
 me.get('name') // IROY2000
 ```
 
-The following to show case you can merge with plain object
+The following to show case you can merge with a plain object
 
 ```javascript
 let map2 = Map({
@@ -62,14 +62,14 @@ let mapPlainObject = {
 
 // ImmutableJS treat JavaScript Array or Object as an Iterable
 // ----------------------------------------------------------------
-me.merge(map2, mapPlainObject)  // now the map includes age and gender
+me.merge(map2, mapPlainObject)  // now the map includes age and gender: { "name": "IROY2000", "hobby": "reading", "age": "> 20", "gender": "male" }
 ```
 
 **Equality Checking**
 
-Note that the equality checking is apply to not just Map only but to others as well.
+Note that the equality checking is applied to not just Map only but to others as well.
 
-Assume the have the following data structure
+Assume that you have the following data structure
 
 ```javascript
 import { Map } from 'immutable'
@@ -94,10 +94,10 @@ map2.keySeq().equals(me.keySeq())
 
 ```
 
-**Note:** If you don't understand what is Iterable, it is a collection of objects that allow you to iterate through ( or loop through ) with functions like `map()`, `filter()` or native js `for ... in`.  Here is the official documentation in immutablejs on [Iterable](https://facebook.github.io/immutable-js/docs/#/Iterable), and here is a [stackoverflow](http://stackoverflow.com/questions/18884249/checking-whether-something-is-iterable) link if you need more insight.
+**Note:** If you don't understand what is Iterable, it is a collection of objects that allow you to iterate through ( or loop through ) with functions like `map()`, `filter()` or native js `for ... in`.  Here is the official documentation in immutablejs on [Iterable](https://facebook.github.io/immutable-js/docs/#/Iterable), and here is a [StackOverflow](http://stackoverflow.com/questions/18884249/checking-whether-something-is-iterable) link if you need more insight.
 
 
-The following show case some common use case for a map
+The following showcase some common cases for a map
 
 ```javascript
 
@@ -157,17 +157,17 @@ me.updateIn(['profile'], profile => profile.delete('hobby'))
 
 ```
 
-**Note** `fromJS` is an convenience function that covert nested Objects and Arrays into immutable `Map` and `List` automatically. So if you are using `fromJS`, do not apply or mix `Map` or `List` as you could introducde unintentional bugs.
+**Note** `fromJS` is a convenience function that convert nested Objects and Arrays into immutable `Map` and `List` automatically. So if you are using `fromJS`, do not apply or mix `Map` or `List` as you could introduce unintentional bugs.
 
 
 ## List
 
-#### Assume you have the follwing data structure
+#### Assume you have the following data structure
 
 In immutable.js, most of the data structure shares a lot of the same functionalities, because they are inheriting from the same data structure - [Iterable](https://facebook.github.io/immutable-js/docs/#/Iterable)
 
 
-It supports javascript array like operations, for example, `pop`, `push`, `concat`, `shift` ...
+It supports javascript array-like operations, for example, `pop`, `push`, `concat`, `shift` ...
 
 ```javascript
 import { List } from 'immutable'
@@ -263,8 +263,8 @@ let heroSalaryList = Immutable.List([
 ])
 
 // Iterate through the list and reduce the list to a value
-// For example, add all salary of a hero 
-// ( and divide by number of hero )
+// For example, add all salaries of heroes 
+// ( and divide by number of heroes )
 // ----------------------------------------------------------
 let averageSalary = heroSalaryList.reduce((total, hero) => {   
   return total + hero.salary
@@ -287,7 +287,7 @@ filteredHeroSalaryList.get(0).get('name') // Hawkeye
 ## Other Data Structure
 
 #### Set
-An array ( or iterable type ) of unique elements, and it will remove any duplicates.
+An array ( or iterable type ) of unique elements and it will remove any duplicates.
 
 ```javascript
 import { Set } from 'immutable'
@@ -353,7 +353,7 @@ batwoman.toJSON() // { skill: 'do very bad thing' }
 ```
 
 #### Seq ( Lazy Operation )
-Lazy operation means the chain methods ( operations ) are not exeucted until it is requested. And it will stop the execute when the return items fulfill the request.
+Lazy operation means that the chain methods ( operations ) are not executed until it is requested. And it will stop the execution when the returned items fulfill the request.
 
 ```javascript
 import { Seq } from 'immutable'
