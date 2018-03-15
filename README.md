@@ -6,6 +6,8 @@ This documentation is trying to help people who start using [immutable.js](https
 
 **If you are looking for basic concepts**, please look at the last section `Resources`, I put up a few links to hook you up with some important concepts in Immutable / Immutablejs.
 
+
+
 ## Table of Contents
 * [Map](#map)
 * [List](#list)
@@ -157,7 +159,7 @@ me.updateIn(['profile'], profile => profile.delete('hobby'))
 
 ```
 
-**Note** `fromJS` is a convenience function that convert nested Objects and Arrays into immutable `Map` and `List` automatically. So if you are using `fromJS`, do not apply or mix `Map` or `List` as you could introduce unintentional bugs.
+**Note** `fromJS` is a convenience function that convert nested Objects and Arrays into immutable `Map` and `List` automatically. So if you are using `fromJS`, **do not** apply or mix `Map` or `List` as you could introduce unintentional bugs.
 
 
 ## List
@@ -410,6 +412,6 @@ femaleHero.get(0)  // return 'black widow is a female'
 ## Contributions
 **Pull Request are welcomed !!!** Hopefully it will be a **community driven** effort to make other developers' life easier when learning immutable.js 
 
-PR could include more examples, better introduction, presentations, resources ... etc.
+***PR*** could include more examples, better introduction, presentations, resources ... etc.
 
 
